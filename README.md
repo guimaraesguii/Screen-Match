@@ -1,2 +1,2 @@
 
-Projeto desenvolvido no segundo curso da formação Avançando com Java da Alura
+Projeto desenvolvido na formação Java Web: crie aplicações usando Spring Boot da Alura
