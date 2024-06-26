@@ -170,11 +170,11 @@ public class Principal {
         var qtdTemporadas = leitura.nextInt();
         System.out.println("Digite a avaliação mínima: ");
         var avaliacao = leitura.nextDouble();
-        List<Serie> seriesMaxTemporada = repositorio.findByTotalTemporadasLessThanEqualAndAvaliacaoGreaterThanEqual(qtdTemporadas, avaliacao);
+//        List<Serie> seriesMaxTemporada = repositorio.findByTotalTemporadasLessThanEqualAndAvaliacaoGreaterThanEqual(qtdTemporadas, avaliacao);
+        List<Serie> seriesMaxTemporada = repositorio.seriesPorTemporadaEAvaliacao(qtdTemporadas, avaliacao);
+
         seriesMaxTemporada.forEach(s -> System.out.println("Título: " + s.getTitulo()
                 + " Avaliação: " + s.getAvaliacao()
                 + " Total temporadas: " + s.getTotalTemporadas()));
     }
-
-
 }
