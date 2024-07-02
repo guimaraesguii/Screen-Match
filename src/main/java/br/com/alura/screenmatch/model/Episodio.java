@@ -1,5 +1,6 @@
 package br.com.alura.screenmatch.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import org.hibernate.annotations.ManyToAny;
 import java.time.LocalDate;
@@ -12,6 +13,7 @@ public class Episodio {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @ManyToOne
+    @JsonIgnore
     private Serie serie;
     private Integer temporada;
     private String titulo;
