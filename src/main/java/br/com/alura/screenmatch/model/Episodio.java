@@ -13,7 +13,6 @@ public class Episodio {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @ManyToOne
-    @JsonIgnore
     private Serie serie;
     private Integer temporada;
     private String titulo;
