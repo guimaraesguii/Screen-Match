@@ -11,14 +11,25 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
+@RequestMapping("/series")
 public class SerieController {
 
     @Autowired
     private SerieService service = new SerieService();
 
 //    @GetMapping ou @RequestMapping(method = {RequestMethod.GET}, value = "subdominio")
-    @RequestMapping(method = {RequestMethod.GET}, value = "/series")
+    @GetMapping
     public List<SerieDTO> obterSeries(){
         return service.obterTodasAsSeries();
+    }
+
+    @GetMapping("/top5")
+    public List<SerieDTO> top5Series(){
+        return service.obterTop5Series();
+    }
+
+    @GetMapping("/lancamentos")
+    public List<SerieDTO> obterLancamentos(){
+        return service.obterLancamentos();
     }
 }

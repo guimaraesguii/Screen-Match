@@ -1,7 +1,11 @@
 package br.com.alura.screenmatch.dto;
 
 import br.com.alura.screenmatch.model.Categoria;
+import br.com.alura.screenmatch.model.Serie;
 import jakarta.persistence.*;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 
 public record SerieDTO(long id,
